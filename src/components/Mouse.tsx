@@ -5,17 +5,17 @@ const Mouse = () => {
     const cursor = document.querySelector(".cursor");
 
     window.addEventListener("mousemove", (e) => {
-      cursor.style.top = e.y + "px";
-      cursor.style.left = e.x + "px";
+      (cursor as HTMLElement).style.top = e.y + "px";
+      (cursor as HTMLElement).style.left = e.x + "px";
     });
 
     document.querySelectorAll(".hover").forEach((link) => {
       link.addEventListener("mouseover", () => {
         cursor.classList.add("hovered");
       });
-      
+
       link.addEventListener("mouseleave", () => {
-        cursor.style.transition = ".3s ease-out";
+        (cursor as HTMLElement).style.transition = ".3s ease-out";
         cursor.classList.remove("hovered");
       });
     });

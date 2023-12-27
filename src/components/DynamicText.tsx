@@ -12,7 +12,7 @@ const DynamicText = () => {
       target.appendChild(letter);
 
       letter.classList.add("letter");
-      letter.style.opacity = 0;
+      letter.style.opacity = "0";
       letter.style.animation = "anim 5s ease forwards";
       letter.textContent = array[wordIndex][letterIndex];
 

@@ -5,14 +5,14 @@ const SocialNetwork = () => {
     const icons = document.querySelectorAll(".social-network a");
 
     icons.forEach((link) => {
-      link.addEventListener("mouseover", (e) => {
-        link.style.transform = `translate(${e.offsetX - 20}px, ${
+      link.addEventListener("mouseover", (e: MouseEvent) => {
+        (link as HTMLElement).style.transform = `translate(${e.offsetX - 20}px, ${
           e.offsetY - 13
         }px)`;
       });
 
       link.addEventListener("mouseleave", () => {
-        link.style.transform = "";
+        (link as HTMLElement).style.transform = "";
       });
     });
   };
